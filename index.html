@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head lang="pt-br">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,inital-scale=1.0">
+        <link rel="shortcut icon" href="Goescat-Macaron-Gksu-root-terminal.ico" type="image/x-icon">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+            @font-face {
+                font-family: days;
+                src: url('fontes/Blueberry\ Days.ttf');
+                font-style: normal;
+                font-weight: normal;
+            }
+
+            body {
+                background-image: linear-gradient(to left,  #4ECDC4, #5E239D);
+            }
+
+            h1 {
+                font-family: days;
+            }
+
+            p {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: normal;
+                font-style: oblique;
+            }
+        </style>
+        <title>Formatação de texto</title>
+        </head>
+        <body>
+            <h1>Como deixar um texto em negrito?</h1>
+            <p>Existem duas formas de deixar um texto em negrito. Tem a <strong>forma semântica</strong> e a <strong>não semântica</strong></p>
+            <p>Vc pode usar a tag <strong>&lt;b&gt;</strong> para deixar o texto em negrito, porém, ela não possui significado e só vai mudar a forma do texto.</p>
+            <p>Vc também pode usar a tag <strong>&lt;strong&gt;</strong> para deixar o texto em negrito. Essa tag além de mudar a forma do texto também indica que ele tem força.</p>
+            <hr>
+            <h1>Como deixar o texto em itálico?</h1>
+            <p>Existem duas formas de deixar um texto em itálico. Existe a forma <strong>semântica</strong> e a <strong>não semântica.</strong></p>
+            <p>Vc pode usar a tag <strong>&lt;i&gt;</strong> para deixar o texto em itálico, porém, ele só vai mudar a forma do texto e não tem significado.</p>
+            <p>Vc também pode usar a tag <strong>&lt;em&gt;</strong> para deixar o texto em itálico. Essa tag além de mudar a forma do texto também dá ênfase a esse texto.</p>
+            <hr>
+            <h1>Conclusão</h1>
+            <p>O ideal é usar apenas as tags semânticas.</p>
+            <hr>
+            <h1>Como colocar um conteúdo dentro de uma tag?</h1>
+            <p>Selecione o conteúdo, depois aperte <strong>ctrl+shift+p</strong> e depois escreva qual a tag onde vc quer colocar o conteúdo e aperte enter.</p>
+            <hr>
+            <h1>Marcar um trecho do texto</h1>
+            <p>Sabe quando vc está estudando através de um livro e vc usa um marcador de texto pra sublinhar algo importante? É possível fazer algo parecido no HTML. Usando a tag <strong>&lt;mark&gt;</strong> vc pode sublinhar um trecho como se estivesse usando um marcador de texto no documento HTML. Para mudar a cor do sublinhado use CSS.
+            EX: <mark>A vida é bela.</mark></p>
+            <hr>
+            <h1>Deletado e inserido</h1>
+            <p>A tag <strong>&lt;del&gt;</strong> indica que o trecho do texto pode ser lido, mas deve ser desconsiderado. EX: Eu <del>não</del> estou bem.</p>
+            <p>Já a tag <strong>&lt;ins&gt; </strong>indica que aquele trecho foi inserido e que deve prestar atenção nele. Ex: Eu <ins>não</ins> estou bem.</p>
+            <hr>
+            <h1>Subscrito e sobrescrito</h1>
+            <p>A tag <strong>&lt;sup&gt;</strong> deixa a letra ou o que quer que seja pequininha e bem lá no alto.
+                Ex: x<sup>30</sup>, 40<sup>5</sup>
+            </p>
+            <p>Já a tag <strong>&lt;sub&gt;</strong> deixa a letra ou o que quer que seja bem pequenininho e lá embaixo. Ex: H<sub>2</sub>O</p>
+            <hr>
+            <h1>Citações</h1>
+            <p>Vc pode colocar citações no seu documento de duas formas:
+                Use a tag <strong>&lt;q&gt;</strong> para adicionar citações simples, ou seja, citações mais curtas.
+                ex: Uma vez a minha avó disse: <q>água mole, pedra dura, tanto bate até que fura.</q>
+                <p>Sim, eu poderia colocar apenas as aspas para indicar que é uma citação, porém, essa tag tem significado e por isso é recomendado usá-la ao invés de só colocar aspas.</p>
+                <p>Use a tag<strong> &lt;blockquote&gt;</strong> para adicionar citações de blocos, ou seja, citações longas que tenham quebra de linha.
+                    ex: Arky disse para Mercedes: <blockquote>Sad experiences are sad no matter how many times you've experienced them... Please don't just ignore it because you're used to it.</blockquote>
+                    Use o atributo cite para colocar um link de um site relacionado a fonte de onde vc tirou a citação, como o site do autor ou o livro de onde tirou.
+                </p>
+                <hr>
+                <h1>Abreviações</h1>
+                <p>Para indicar abreviações, use a tag <strong>&lt;abbr title='significado da abreviação'&gt;</strong>. O significado que está no title vai ser exibido em um pequeno pop-up ao passar o mouse por cima da abreviação.</p>
+                ex: <abbr title="Hyper Text Markup Language">HTML</abbr>
+            </p>
+            <hr>
+            <h1>Código fonte</h1>
+            <p>Para adicionar códigos ao seus documento use a tag <strong>&lt;code&gt;</strong>. Ela vai deixar a fonte monoespaçada, facilitando a leitura do código. A fonte monoespaçada deixa as letras com larguras iguais. Veja a diferença: <br>
+                document.getElementById('teste') <br>
+                <code>document.getElementById('teste')</code>
+            </p>
+                <p>Para códigos curtos o &lt;code&gt; sozinho é suficiente. Mas e quando o código é maior? <br>
+                    
+                    <code>num = int(input('Digite um número'))
+                        if num % 2 == 0:
+                        print(f'o número {num} é ímpar')
+                        print('fim do programa')
+                        </code>
+
+                        Percebeu? O código não dica indentado. Como vimos anteriormente os espaços adicionais não são exibidos quando a página é carregada e por isso o código fica todo junto. Para exibir as identações precisamos colocar todo esse código dentro da tag <strong>&lt;pre&gt;</strong>.
+                        <pre>
+
+                <code>num = int(input('Digite um número'))
+                    if num % 2 == 0:
+                    print(f'o número {num} é ímpar')
+                    print('fim do programa')
+                                </code>
+
+                        </pre>
+                </p>
+                <p>Agora sim o código ficou bonito. Se vc quiser vc pode mudar a tabulação do código. Selecione o código e aperte <strong>shift + tab</strong> pra tirar espaços ou aperte <strong>tab</strong> para adicionar espaços. </p>
+
+                <p>Obliquo</p>
+                <p style="font-style: italic;">itálico</p>
+        </body>
+</html>
